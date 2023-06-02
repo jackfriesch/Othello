@@ -237,6 +237,7 @@ class Othello:
             if self._board[piece_position[0] + 1][piece_position[1] - 1] == "X " and count >= 1:
                 for coords in downleft_list:
                     self._board[coords[0]][coords[1]] = "X "
+        return self._board
 
     def play_game(self, color, piece_position):
         if color.lower() == "white":
