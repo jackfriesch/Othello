@@ -281,22 +281,3 @@ class Othello:
             return "Winner is white player: " + white_name
         if white_count < black_count:
             return "Winner is white player: " + black_name
-
-
-game = Othello()
-game.create_player("Helen", "black")
-game.create_player("Leo", "white")
-game.print_board()
-game.make_move("black", (5,6))
-game.print_board()
-game.make_move("white", (6, 4))
-game.print_board()
-game.make_move("black", (4, 3))
-game.print_board()
-game.make_move("white", (5, 7))
-game.print_board()
-game.make_move("black", (4, 6))
-game.print_board()
-game.make_move("white", (3, 4))
-game.print_board()
-print(game.return_winner())
