@@ -13,6 +13,8 @@ class Player:
 
     def get_name(self):
         return self._name
+
+
 class Othello:
     def __init__(self):
         self._player_list = []
@@ -253,8 +255,10 @@ class Othello:
 
     def return_available_positions(self, color):
         if color.lower() == "white":
+            self._valid_w_moves.sort()
             return self._valid_w_moves
         if color.lower() == "black":
+            self._valid_b_moves.sort()
             return self._valid_b_moves
 
     def print_board(self):
@@ -282,3 +286,4 @@ class Othello:
             return "Winner is white player: " + white_name
         if white_count < black_count:
             return "Winner is white player: " + black_name
+
