@@ -143,8 +143,9 @@ class Othello:
         self._valid_b_moves = list(set(self._valid_b_moves))
         if len(self._valid_w_moves) == 0 and len(self._valid_b_moves) == 0:
             return self.return_winner()
+        return self._board
 
-    def return_valid_moves(self, color):
+    def return_available_positions(self, color):
         if color.lower() == "white":
             self._valid_w_moves.sort()
             return self._valid_w_moves
