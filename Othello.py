@@ -62,7 +62,7 @@ class Othello:
                 possible_flip = []
                 count = 0
                 for multiplier in range(1, 10):
-                    if 0 < row+x*multiplier <= 9 and 0 < column+y*multiplier <= 9:
+                    if 0 < row+x*multiplier < 9 and 0 < column+y*multiplier < 9:
                         if self._board[row+x*multiplier][column+y*multiplier] == "X":
                             possible_flip.append((row+x*multiplier, column+y*multiplier))
                             count += 1
@@ -75,7 +75,7 @@ class Othello:
                 possible_flip = []
                 count = 0
                 for multiplier in range(1, 10):
-                    if 0 < row + x * multiplier <= 9 and 0 < column + y * multiplier <= 9:
+                    if 0 < row + x * multiplier < 9 and 0 < column + y * multiplier < 9:
                         if self._board[row+x*multiplier][column+y*multiplier] == "O":
                             possible_flip.append((row+x*multiplier, column+y*multiplier))
                             count += 1
@@ -112,7 +112,7 @@ class Othello:
                 count = 0
                 space_count = 0
                 for multiplier in range(1, 10):
-                    if 0 < row + x * multiplier <= 9 and 0 < column + y * multiplier <= 9:
+                    if 0 < row + x * multiplier < 9 and 0 < column + y * multiplier < 9:
                         if self._board[row+x*multiplier][column+y*multiplier] == "X":
                             count += 1
                         if self._board[row+x*multiplier][column+y*multiplier] == "." and count >= 1:
@@ -129,7 +129,7 @@ class Othello:
                 count = 0
                 space_count = 0
                 for multiplier in range(1, 10):
-                    if 0 < row + x * multiplier <= 9 and 0 < column + y * multiplier <= 9:
+                    if 0 < row + x * multiplier < 9 and 0 < column + y * multiplier < 9:
                         if self._board[row + x * multiplier][column + y * multiplier] == "O":
                             count += 1
                         if self._board[row + x * multiplier][column + y * multiplier] == "." and count >= 1:
