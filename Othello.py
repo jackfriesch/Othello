@@ -230,3 +230,4 @@ class Othello:
             return "Winner is black player: " + black_name
         if self._white_pieces == self._black_pieces:
             return "It's a tie"
+
